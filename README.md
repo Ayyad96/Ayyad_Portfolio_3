@@ -24,7 +24,7 @@ CREATE TABLE fatalencounter (
 
 CREATE TABLE policekilling (
 	name VARCHAR(100),
-	id VARCHAR(50) REFERENCES fatalencounter(id),
+	id VARCHAR(50),
 	age INT,
 	gender VARCHAR(50),
 	race VARCHAR(50),
@@ -34,7 +34,7 @@ CREATE TABLE policekilling (
 	state VARCHAR(100),
 	zipcode INT,
 	country VARCHAR(100),
-	respon_agency VARCHAR(200),
+	respon_agency VARCHAR(300),
 	death_cause VARCHAR(100),
 	official_disposition VARCHAR(200),
 	court_charges VARCHAR(200),
