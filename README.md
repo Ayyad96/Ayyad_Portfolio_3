@@ -61,3 +61,19 @@ CREATE TABLE policedeath (
 
 
 
+SELECT id, COUNT(*)
+FROM policekilling
+GROUP BY id
+HAVING COUNT(*) > 1;
+
+
+
+
+
+
+
+
+
+
+
+
