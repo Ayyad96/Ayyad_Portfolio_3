@@ -67,6 +67,25 @@ GROUP BY id
 HAVING COUNT(*) > 1;
 
 
+SELECT race, year, location, COUNT(race) OVER (PARTITION BY location) AS totalcount
+FROM fatalencounter
+ORDER BY totalcount DESC
+
+SELECT race, COUNT(*)
+FROM fatalencounter
+GROUP BY race 
+ORDER BY COUNT(*) DESC
+
+SELECT year, COUNT(*)
+FROM fatalencounter
+WHERE year IS NOT NULL
+GROUP BY year 
+ORDER BY year 
+
+SELECT DISTINCT use_of_force FROM fatalencounter
+
+
+
 
 
 
