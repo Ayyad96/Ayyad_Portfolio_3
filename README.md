@@ -110,6 +110,22 @@ SELECT * FROM fatalencounter WHERE age < 10
 SELECT DISTINCT cause_of_death
 FROM fatalencounter
 
+CREATE TABLE crime AS
+SELECT * FROM fatalencounter
+WHERE disposition = 'Criminal/Civil suit/Pending' 
+OR disposition = 'Criminal' 
+OR disposition = 'Criminal/Civil suit/Family awarded money' 
+OR disposition = '/Criminal'
+OR disposition = 'Murder/suicide'
+OR disposition = 'Criminal/Off-duty/Acquitted'
+OR disposition = 'Criminal/Officer indicted/Guilty'
+OR disposition = 'Murder/Suicide'
+OR disposition = 'Criminal/Off-duty'
+OR disposition = 'Grand jury/No bill or Cleared'
+OR disposition = 'Grand jury/Referred to prosecutor'
+OR disposition = 'Civil suit/Settled out of court'
+OR disposition = 'Murder/Suicide';
+
 
 
 
