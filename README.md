@@ -8,18 +8,17 @@ CREATE TABLE fatalencounter (
 	age INTEGER,
 	gender VARCHAR(50),
 	race VARCHAR(50),
-	date_of_death DATE,
+	date DATE,
 	loc_of_death VARCHAR(200),
-	location VARCHAR(50),
-	address VARCHAR(200),
-	respon_agency VARCHAR(200),
+	state VARCHAR(50),
+	address VARCHAR(300),
+	respon_agency VARCHAR(300),
 	cause_of_death VARCHAR(100),
-	official_disposition VARCHAR(100),
+	disposition VARCHAR(100),
 	use_of_force VARCHAR(100),
 	mental_illness VARCHAR(50),
 	year INT
 )
-
 
 
 CREATE TABLE policekilling (
@@ -61,10 +60,6 @@ CREATE TABLE policedeath (
 
 
 
-SELECT id, COUNT(*)
-FROM policekilling
-GROUP BY id
-HAVING COUNT(*) > 1;
 
 
 SELECT race, year, location, COUNT(race) OVER (PARTITION BY location) AS totalcount
@@ -83,6 +78,40 @@ GROUP BY year
 ORDER BY year 
 
 SELECT DISTINCT use_of_force FROM fatalencounter
+
+SELECT state, COUNT(*)
+FROM fatalencounter
+GROUP BY state
+ORDER BY COUNT(*) DESC
+
+SELECT age, COUNT(*)
+FROM fatalencounter
+WHERE age IS NOT NULL
+GROUP BY age 
+ORDER BY COUNT(*) DESC
+
+SELECT DISTINCT mental_illness
+FROM fatalencounter
+
+SELECT mental_illness, COUNT(*)
+FROM fatalencounter
+WHERE mental_illness IS NOT NULL 
+GROUP BY mental_illness
+ORDER BY COUNT(*) DESC
+
+SELECT gender, COUNT(*)
+FROM fatalencounter
+WHERE gender IS NOT NULL
+GROUP BY gender
+ORDER BY COUNT(*) DESC
+
+SELECT * FROM fatalencounter WHERE age < 10
+
+SELECT DISTINCT cause_of_death
+FROM fatalencounter
+
+
+
 
 
 
