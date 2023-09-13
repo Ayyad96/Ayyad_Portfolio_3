@@ -3,7 +3,7 @@ Third_Portfolio
 data analyst portfolio (Police_death_crime_analysis)
 
 -- kaggle dataset on fatal encounter data record in united states
--- record data from 
+-- record data from 2000 to 2020
 -- cleaning the data in excel and done some data format and data wrangling
 -- import the data to postgresql to view a better insight since this is a large data (excel is bit slow managing this data)
 -- having a confusion regarding tha data 
@@ -203,25 +203,34 @@ ORDER BY year;
 */
 
 
+-- The data shows that most of the crime were mostly commited by men compare to women
+-- besides that i realized that united states which is America really do recognize other gender besides men and women which
+-- considered as transgender ( I really thought this banned thing is making them not recognized this based on TikTok, it  
+-- the other way around)
+
+-- Further, it was recorded that most of the crime are commited by european-american which is white man with second come  
+-- african-american which is black men mostly
+-- i know that this could be different from what we heard from the social media and news and stuff, but to be very clear  
+-- the data that i was analyze were recorded crime that only include fatal that involve murdering and injuring people. 
+-- people died in this dataset 
+-- data recorded in this fatal encounter (crime) table. this does not involve other crime such as rape stealing etc. the 
+-- sample were to small
+
+-- The result also shows that most of the crime that were recorded happened the most in Texas state with California in 
+-- second place
+-- the data also shows that the rate of crime that include murder and injury fluctuate over the time and it recorded the  
+-- highest was in 2019 and its down in the year of 2020 (might have been covid era start) 
+
+-- the data shows the crime (involve death and injury) happen in the United States of America and it really open my eyes 
+-- America is a big country, a well developed country but after viewing this fatal encounter crime data it shows that this 
+-- big country facing a very high number of crime recorded in the country 
+-- I am not saying that America is a bad country, but im pretty sure that they are not the greatest one like they claim to 
+-- be
+
+
 SELECT * FROM crime;
 
 
 /*
 <img width="615" alt="Full_report_crime_fatalencounter_dashboard" src="https://github.com/Ayyad96/Ayyad_Portfolio_3/assets/140683898/29d77ec2-87d5-4d99-b0ba-bcf8537fc096">
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
